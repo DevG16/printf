@@ -43,9 +43,9 @@ int print_string(va_list types, char buffer[],
 	UNUSED(size);
 	if (str == NULL)
 	{
-	str = "(null)";
-	if (precision >= 6)
-		str = "      ";
+		str = "(null)";
+		if (precision >= 6)
+			str = "      ";
 	}
 
 while (str[length] != '\0')
@@ -156,6 +156,7 @@ int print_binary(va_list types, char buffer[],
 		int flags, int width, int precision, int size)
 {
 	unsigned int n, m, i, sum;
+	unsigned int a[32];
 	int count;
 
 	UNUSED(buffer);
